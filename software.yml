@@ -1,0 +1,17 @@
+- name: Install required software
+  hosts: all
+ 
+  tasks: 
+   - yum:
+      name: "{{ packages }} "
+      state: present
+     vars:
+       packages: 
+        - git
+        - tcpdump
+        - php
+ 
+   - service:
+      name: apache2
+      state: started
+      enabled: yes
