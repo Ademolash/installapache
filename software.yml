@@ -12,6 +12,6 @@
         - php
  
    - service:
-      name: apache2
+      name: httpd
       state: started
       enabled: yes
